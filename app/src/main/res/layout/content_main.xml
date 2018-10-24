@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:showIn="@layout/app_bar_main">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        card_view:cardCornerRadius="4dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/top_layout"
+                android:padding="@dimen/activity_vertical_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:text="FROM" />
+
+                    <TextView
+                        android:id="@+id/ed_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorAccent"
+                        android:clickable="true"
+                        android:textStyle="bold"
+                        android:editable="false"
+                        android:drawablePadding="10dp"
+                        android:hint="Select Town"/>
+
+                </LinearLayout>
+                <!--end from layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:text="TO"/>
+
+                    <TextView
+                        android:id="@+id/ed_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:clickable="true"
+                        android:padding="10dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:drawablePadding="10dp"
+                        android:editable="false"
+                        android:hint="Select Town"
+                         />
+
+                </LinearLayout>
+                <!--end to layout-->
+            </LinearLayout>
+            <View style="@style/Divider"
+                android:id="@+id/divider"
+                android:layout_below="@+id/top_layout"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ed_date"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:drawableStart="@drawable/ic_date"
+                android:clickable="true"
+                android:layout_below="@+id/divider"
+                android:editable="false"
+                android:hint="Traveling Date"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_date" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:text="Search"
+        android:textStyle="bold"
+        android:background="@drawable/btn_drawable"
+        android:id="@+id/btn_search"/>
+
+</RelativeLayout>
